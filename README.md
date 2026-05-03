@@ -16,6 +16,7 @@ WhatsApp natively doesn't allow you to "mute" or "block" a specific person insid
 
 ## ⚠️ Known Limitations
 Please note that this is a community project and depends on the specific structure of WhatsApp Web's DOM, which changes frequently. You might encounter:
+- **Nickname vs. Phone Number:** Filtering by nickname is significantly more unstable due to how WhatsApp Web dynamically renders names. **For best results, always use the phone number.**
 - **Intermittent visibility:** Sometimes the extension might fail to catch a message immediately.
 - **Profile Picture residues:** In some edge cases, a profile picture might still be visible for a split second or remain due to specific grouping structures.
 - **Media Filtering:** While it filters stickers and view-once messages, some specific media types or newly updated WhatsApp formats might still bypass the filter occasionally.
