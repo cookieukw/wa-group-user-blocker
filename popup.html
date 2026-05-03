@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsWeb Blocker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-color)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      WhatsWeb Blocker
+    </h2>
+    <p class="subtitle">Enter the <b>number</b> or <b>name</b> as it appears on WhatsApp to hide messages.</p>
+    
+    <div class="input-group">
+      <input type="text" id="usernameInput" placeholder="Ex: 5511999999999 or Name">
+      <button id="addButton">Block</button>
+    </div>
+
+    <div class="settings">
+      <div class="setting-item">
+        <label class="switch">
+          <input type="checkbox" id="hideStickers">
+          <span class="slider round"></span>
+        </label>
+        <span>Hide Stickers</span>
+      </div>
+      <div class="setting-item">
+        <label class="switch">
+          <input type="checkbox" id="hideViewOnce">
+          <span class="slider round"></span>
+        </label>
+        <span>Hide View Once</span>
+      </div>
+    </div>
+
+    <h3>Blocked Users</h3>
+    <ul id="blockedList"></ul>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

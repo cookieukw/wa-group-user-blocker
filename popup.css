@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #00a884;
+  --primary-hover: #06cf9c;
+  --bg-color: #111b21;
+  --panel-bg: #202c33;
+  --input-bg: #2a3942;
+  --text-main: #e9edef;
+  --text-secondary: #8696a0;
+  --danger-color: #f15c6d;
+  --danger-hover: #ff7684;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 20px;
+  width: 380px;
+  min-height: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h3 {
+  margin: 12px 0 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+input[type="text"] {
+  flex: 1;
+  background-color: var(--input-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 168, 132, 0.2);
+}
+
+button#addButton {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button#addButton:hover {
+  background-color: var(--primary-hover);
+}
+
+button#addButton:active {
+  transform: scale(0.95);
+}
+
+#blockedList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blocked-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--panel-bg);
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.blocked-item span {
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.remove-btn {
+  background-color: rgba(241, 92, 109, 0.1);
+  color: var(--danger-color);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.remove-btn:hover {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+/* Scrollbar personalizada */
+#blockedList::-webkit-scrollbar {
+  width: 6px;
+}
+#blockedList::-webkit-scrollbar-track {
+  background: transparent;
+}
+#blockedList::-webkit-scrollbar-thumb {
+  background: var(--input-bg);
+  border-radius: 10px;
+}
+#blockedList::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
