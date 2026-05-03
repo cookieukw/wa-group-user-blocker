@@ -8,7 +8,7 @@ chrome.storage.local.get(['blockedUsers', 'hideStickers', 'hideViewOnce'], (resu
   blockedUsers = result.blockedUsers || [];
   hideStickers = result.hideStickers !== false;
   hideViewOnce = result.hideViewOnce !== false;
-  console.log('WhatsWeb Blocker: Settings loaded');
+  console.log('WA Group User Blocker: Settings loaded');
   hideBlockedMessages();
 });
 
@@ -169,4 +169,4 @@ observer.observe(document.body, {
   subtree: true
 });
 
-console.log('WhatsWeb Blocker: Group Mode Active (Sidebar Protection ON)');
+console.log('WA Group User Blocker: Group Mode Active (Sidebar Protection ON)');
